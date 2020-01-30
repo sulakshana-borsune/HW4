@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+   
+    
+    <div  class="card text=center ">
+        <div id="mydiv"></div>
+    <h1 id="h1"> Start Quiz Quiz!</h1>
+    <button id="btn"> Timer</button>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <form>
+                Inside which HTML element do we put the JavaScript?<br>
+              <input type="radio" name="colors" id="red">Scripting<br>
+              <input type="radio" name="correct" id="blue">script
+              <!-- <input type="radio" name="colors" id="green">javascript<br> -->
+            </form>
+            <form>
+                Where is the correct place to insert a JavaScript?<br>
+                <input type="radio" name="colors" id="blue">head section<br>
+                <input type="radio" name="correct" id="red">body section
+            </form>
+         
+        </div>
+      </div>
+    <div>
+      <button id = "button"> Submit</button> 
+      
+    <br> 
+      
+    <div id="result"></div> 
+      
+    
+         
+
+
+<script>
+    let highscore = ''
+    
+        var time = 5*60, counter = document.getElementById('btn'), count = time;
+    setInterval(function(){
+        
+    var c = count--,
+    minutes = (c/60)>>0,
+    seconds = (c-minutes*60)+'';
+    counter.textContent='Time Left '+ minutes +':' +  (seconds.length>1?'':'0') + seconds
+    count!=0||(count=time);
+},1000)
+
+//function check() {
+  //document.getElementById("red").checked = true;
+//highscore = highscore + 10
+//}
+//function uncheck() {
+  //document.getElementById("red").checked = false;
+//timeloss = -20
+//}
+//function check() {
+  document.getElementsByName('button').addEventListener('click',event=>{
+
+  
+ if(document.getElementsByName("correct").checked ==true){
+  highscore += 10
+  console.log(highscore)
+}
+  })
+
+
+
+
+//document.addEventListener('click',event=>{
+  //if(event.target.classname('correct'))
+//{
+  //console.log(event.target.value)
+  //highscore += 10
+//}
+//else{
+  //c -= 10
+//}
+//})
+//}
+  // console.log(highscore)
+   //document.getElementById('div1').textContent = highscore
+   </script> 
+</body>
+</html>
